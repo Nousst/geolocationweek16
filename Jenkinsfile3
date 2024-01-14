@@ -1,6 +1,6 @@
 pipeline{
     agent {
-        label 'ansible'
+        label'ansible'
     }
     stages{
         stage('check current directory'){
@@ -8,6 +8,8 @@ pipeline{
                 sh 'pwd'
                 sh 'whoami'
                 sh 'mkdir ansible'
+                sh 'python3 --version'
+                sh 'npm --version'
             }
         }
     }
